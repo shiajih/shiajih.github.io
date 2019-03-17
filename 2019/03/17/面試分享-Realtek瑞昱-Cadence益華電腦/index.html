@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-tw">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="life,cadence,realtek,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="背景介紹119文組、114CS碩在學，需服四個月兵役研究領域為Back-end的電子設計自動化(Electronic Design Automation - EDA)主要用C/C++寫相關演算法 面試前置準備碩士這一兩年，老師滿鼓勵我們寒暑假到CIC上相關EDA Tool課程。要走這領域，ICCompiler or ICC2、Innovus、Design Compiler都得是必會的工具，儘管研究">
+<meta name="keywords" content="life,cadence,realtek">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面試分享(Realtek瑞昱&#x2F;Cadence益華電腦)">
+<meta property="og:url" content="http://shiajih.github.io/2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/index.html">
+<meta property="og:site_name" content="Shiajih&#39;s note">
+<meta property="og:description" content="背景介紹119文組、114CS碩在學，需服四個月兵役研究領域為Back-end的電子設計自動化(Electronic Design Automation - EDA)主要用C/C++寫相關演算法 面試前置準備碩士這一兩年，老師滿鼓勵我們寒暑假到CIC上相關EDA Tool課程。要走這領域，ICCompiler or ICC2、Innovus、Design Compiler都得是必會的工具，儘管研究">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://i.imgur.com/PzwSCdO.jpg">
+<meta property="og:image" content="https://i.imgur.com/AbJ2yZ2.jpg">
+<meta property="og:updated_time" content="2019-03-17T16:10:12.074Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面試分享(Realtek瑞昱&#x2F;Cadence益華電腦)">
+<meta name="twitter:description" content="背景介紹119文組、114CS碩在學，需服四個月兵役研究領域為Back-end的電子設計自動化(Electronic Design Automation - EDA)主要用C/C++寫相關演算法 面試前置準備碩士這一兩年，老師滿鼓勵我們寒暑假到CIC上相關EDA Tool課程。要走這領域，ICCompiler or ICC2、Innovus、Design Compiler都得是必會的工具，儘管研究">
+<meta name="twitter:image" content="https://i.imgur.com/PzwSCdO.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://shiajih.github.io/2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/">
+
+
+
+
+
+  <title>面試分享(Realtek瑞昱/Cadence益華電腦) | Shiajih's note</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-136398361-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shiajih's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Do one thing, and do it well.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            歸檔
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://shiajih.github.io/2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiajih">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiajih's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面試分享(Realtek瑞昱/Cadence益華電腦)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-03-17T23:56:18+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/雜記/" itemprop="url" rel="index">
+                    <span itemprop="name">雜記</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="背景介紹"><a href="#背景介紹" class="headerlink" title="背景介紹"></a>背景介紹</h2><p>119文組、114CS碩在學，需服四個月兵役<br>研究領域為Back-end的電子設計自動化(Electronic Design Automation - EDA)<br>主要用C/C++寫相關演算法</p>
+<h2 id="面試前置準備"><a href="#面試前置準備" class="headerlink" title="面試前置準備"></a>面試前置準備</h2><p>碩士這一兩年，老師滿鼓勵我們寒暑假到CIC上相關EDA Tool課程。要走這領域，ICCompiler or ICC2、Innovus、Design Compiler都得是必會的工具，儘管研究不是100%會用到，但去上課拿個證書也是挺不錯。</p>
+<p>修課方面大概就是實體設計自動化(Physical Design Automation)和VLSI-Testing等，清大研究所的必修學分說多不多說少不少，但每堂課收穫都很豐富。</p>
+<p>Coding部份大多是看書或者線上課程如<a href="https://www.coursera.org/" target="_blank" rel="noopener">Coursera</a>、<a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a>等。個人認為<a href="https://www.coursera.org/" target="_blank" rel="noopener">Coursera</a>的質量頗高，我是在〈北京大學：程序設計與算法〉奠立C/C++基礎的。從計算機概論到演算法及資料結構，都講得鉅細靡遺。</p>
+<p>書的話網路上大多推薦C的書是<a href="https://www.tenlong.com.tw/products/9780131103627" target="_blank" rel="noopener">《The C Programming Language》</a><img src="https://i.imgur.com/PzwSCdO.jpg" alt><br>但這本我覺得，對完全沒有任何程式基礎的人讀起來可能有點霧煞煞，不知道為什麼可以這樣可以那樣。<br>C++的話則是英文版《C++ Primer 4/e》，不過目前應該可以看<a href="https://www.tenlong.com.tw/products/9780321714114" target="_blank" rel="noopener">《C++ Primer 5/e》</a>了，C++11提供不少好用語法及功能值得學習（但我是看簡中版，想說看中文比較快），還有<a href="https://www.books.com.tw/products/0010616945?gclid=CjwKCAjw4LfkBRBDEiwAc2DSlL2bWZMsp4OabAzRXUdcMcb2zGbnFke7EdOPTorVAzQ2p7S8Ep2u7BoCrzgQAvD_BwE" target="_blank" rel="noopener">《培養與鍛鍊程式設計的邏輯腦：世界級程式設計大賽的知識、心得與解題分享 [第二版]》</a><br><img src="https://i.imgur.com/AbJ2yZ2.jpg" alt><br>這本能看完並理解其中80%內容應該很強了。當然還有許多經典Coding以及C/C++的書籍，日後再專寫一篇文推薦。</p>
+<p>還有一些有趣主題如Design Patterns、Advanced C++ programming、Verilog等在Udemy上的資源很豐富，一堂課特價時也不過300~400元，很划算，不過上課前最好聽一下開放預覽的片段，有些講師是印度人西班牙人，得看自己能不能習慣這些口音。</p>
+<p>面試前兩三個禮拜有準備自介投影片，和複習C++常見面試題，以及再熟悉一下目前Project的內容及進度，畢竟還沒有畢業，也沒啥東西可以講。</p>
+<h2 id="Realtek-瑞昱-實體設計（總部）"><a href="#Realtek-瑞昱-實體設計（總部）" class="headerlink" title="Realtek 瑞昱 實體設計（總部）"></a>Realtek 瑞昱 實體設計（總部）</h2><p>這間是在104上主動投預聘，投完後隔天人資就打來邀約面試。<br>自傳、成績單什麼的準備齊全後就到現場，HR會問返程時需不需要搭車，在科技版上看到會補貼面試車馬費的公司好像不多，以這點來說瑞昱算不錯。</p>
+<p>進到小房間後開始和一位年輕面試官面試，前半部份主要是他在講公司、這個職位在做什麼，後半部份開始自我介紹。那因為我背景比較特殊，所以面試官肯定會問為何想從文跳資工，這問題的答案已經想過很多次因此他問得時候很快能反應。<br>不過瑞昱是我第一家面試的公司，所以在講得過程中頗緊張，卡卡的。中間有講到目前做得Project(Routing相關)，有個地方回答不出來，面試官試圖引導我，但還是答不太出來…之後他就說好沒關係就讓我接著講下去。最後問了面試官一些職位上的問題後就結束。</p>
+<p>我在修PDA的時候，關於Timing並沒有講太多，Floorplan、Placement、Routing等相關演算法佔絕大部分。個人覺得如果要應徵這個職位，一些Timing的東西要搞得很熟，如STA、Setup time、Hold time、Slack、Clock Tree、Skew、Power EM等。<br>兩個禮拜後致電問結果得到感謝函，其實沒有很意外，因為我真的準備不充足，又是第一間面試的公司因此表現得很緊張。</p>
+<p>總結這次面試，沒有白板題沒有考卷，純粹在附的履歷以及投影片中問答。</p>
+<h2 id="Realtek-瑞昱-多媒體（二廠）"><a href="#Realtek-瑞昱-多媒體（二廠）" class="headerlink" title="Realtek 瑞昱 多媒體（二廠）"></a>Realtek 瑞昱 多媒體（二廠）</h2><p>過了差不多一個月，再次收到瑞昱的面試通知，這次是在二廠，信中是寫實體設計工程師，但到了現場主管才說是多媒部門寫code的職位。這次面試不同的是一開始有做人格測驗，滿多題的但時限內一定寫得完。那因為有了上次的面試經驗，所以這次在心理上放鬆不少，比較能從容面對。主管一樣有問為何從文轉資工，然後大多介紹這職位的工作內容。大概是因為有第一次面試的經驗，這次面試不到一小時就結束了。儘管我在履歷上都有寫就學中且要未役，但直到面試最後，主管才知道我還沒畢業，且還要服四個月兵役，就發一張名片，希望服完兵役後再與他聯繫。</p>
+<p>結果：無聲卡</p>
+<h2 id="Cadence-益華電腦"><a href="#Cadence-益華電腦" class="headerlink" title="Cadence 益華電腦"></a>Cadence 益華電腦</h2><p>這間是學長內推的，首先會寫一張與程式及Boolean Logic有關的考卷，之後兩位主管面試，第一位問得問題個人覺得都很專業，如要怎麼確定A這件事的正確性？要怎麼衡量一個tool跑得結果是好還是不好？還有VLSI-testing上的，Stuck-at fault 1/0 要怎麼判斷？可以怎麼Formulate這問題？FSM的數學模型（因為我用FSM回答Stuck-at fault）？</p>
+<p>EDA跟硬體脫離不了關係，所以主管有問會Verilog嗎？我說在網路上有自學過一點，他就接著問Blocking / Non-Blocking的差別，還有大概解釋一下testbench、4-bit Adder大概怎麼寫，主管有訝異且好奇，對於一個文組學生為何會想學這些，我回答說主要有兩個原因：</p>
+<ol>
+<li>因為常聽到資工本科的同學在講Verilog，所以覺得這東西好像很重要，所以想去學。</li>
+<li>在學校內的佈告欄上，Cadence貼了一張某個年份的徵才海報，第一個職位就是和硬體相關，我問旁邊同學這職位在幹嘛，大概要怎樣的技能，同學說首先你要會Verilog。</li>
+</ol>
+<p>另外，我在Resume上有提到有在接網頁類的case，所以懂一些HTML/CSS、JS、MYSQL等，還有修課有用到一點點Python，所以有問這些語言的特性，和C/C++有啥差別。</p>
+<p>第一位主管感覺起來人真的很好且很強，很有耐心聽你講，且會給你很多回饋，大概面了一個多小時，主管就說ok，他覺得面試滿愉快的。</p>
+<p>第二位是部門主管，沒什麼特別問題，主要是閒聊以及介紹部門和底下各個Team的工作內容，當然也有問為何想從文跳資工。</p>
+<p>包含寫考卷，大概面了四小時左右吧，這次面試真的是很愉快的一次經驗。</p>
+<p>結果：口頭Offer，等核薪</p>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>後來還有幾間公司(Synopsys、趨勢、華邦電、中磊等)的邀約面試，但因為Cadence有給口頭Offer（應該不會被婊吧QQ），就都婉拒了。<br>個人覺得面試重要的是保持冷靜，回答問題時可以想一下不要太快回答，縱使是不會的問題，也盡量想一套說法，還有投影片上的東西都要100%了解，不能一知半解，不了解的東西就不要放進去。</p>
+<p>有空的時候可以多寫寫Leetcode，就算是Easy也沒關係，C的主管有問有沒有在寫Leetcode，我回答有在寫UVA，他建議我改寫Leetcode我也不知為啥。</p>
+<p>這次面試心得就分享到這，希望有幫助到正在找工作的朋友們。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/life/" rel="tag"># life</a>
+          
+            <a href="/tags/cadence/" rel="tag"># cadence</a>
+          
+            <a href="/tags/realtek/" rel="tag"># realtek</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Shiajih</p>
+              <p class="site-description motion-element" itemprop="description">Keep coding.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">標籤</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shiajih" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shiajih@gapp.nthu.edu.tw" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景介紹"><span class="nav-number">1.</span> <span class="nav-text">背景介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面試前置準備"><span class="nav-number">2.</span> <span class="nav-text">面試前置準備</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Realtek-瑞昱-實體設計（總部）"><span class="nav-number">3.</span> <span class="nav-text">Realtek 瑞昱 實體設計（總部）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Realtek-瑞昱-多媒體（二廠）"><span class="nav-number">4.</span> <span class="nav-text">Realtek 瑞昱 多媒體（二廠）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cadence-益華電腦"><span class="nav-number">5.</span> <span class="nav-text">Cadence 益華電腦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#後記"><span class="nav-number">6.</span> <span class="nav-text">後記</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiajih</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://shiajih.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://shiajih.github.io/2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/';
+          this.page.identifier = '2019/03/17/面試分享-Realtek瑞昱-Cadence益華電腦/';
+          this.page.title = '面試分享(Realtek瑞昱/Cadence益華電腦)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://shiajih.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
